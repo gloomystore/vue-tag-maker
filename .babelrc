@@ -1,0 +1,27 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false, // ES 모듈 사용을 위해 modules 옵션을 false로 설정
+        "targets": "> 0.25%, not dead"
+      }
+    ],
+    "@vue/babel-preset-jsx", // Vue의 JSX 프리셋 추가
+    "@babel/preset-typescript" // TypeScript 프리셋 추가
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": 3,
+        "helpers": true,
+        "regenerator": true,
+        "useESModules": true // ES 모듈로 헬퍼 코드 출력
+      }
+    ],
+    // Vue 3의 경우, JSX를 사용하려면 @vue/babel-plugin-jsx가 필요할 수 있습니다.
+    // 아래 플러그인은 필요에 따라 추가할 수 있습니다.
+    "@vue/babel-plugin-jsx"
+  ]
+}
