@@ -11,7 +11,8 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import GloomyTags from './libs/components/GloomyTags.vue'
+// import GloomyTags from './libs/components/GloomyTags.vue'
+import GloomyTags from './dist'
 
 const tags = ref<string[]>([])
 
