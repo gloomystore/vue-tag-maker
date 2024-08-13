@@ -63,7 +63,7 @@ export default {
     classNames: Object,
     throttleTime: {
       type: Number,
-      default: 300
+      default: 10
     }
   },
   data() {
@@ -83,6 +83,9 @@ export default {
       this.$refs.inputRef.focus()
     },
     handleKeyDown(event) {
+      if (event.isComposing) {
+        return
+      }
       const inputValue = event.currentTarget.value.replace(/\s/gi, '')
       const key = event.key
 
