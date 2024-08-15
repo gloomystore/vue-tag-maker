@@ -25,17 +25,26 @@ yarn add vue-tag-maker
    Register the component in the Vue file where you want to use it:
 
    ```vue
-   <script setup lang="ts">
+   <script>
    import GloomyTags from 'vue-tag-maker'
+
+   export default {
+     components: { GloomyTags },
+     data() {
+       return {
+         tags: [] // initial state
+       }
+     },
+     methods: {
+       updateTags(newTags) {
+         this.tags = newTags
+       }
+     }
+   }
    </script>
 
    <template>
-     <GloomyTags
-       :state="tags"
-       :setState="updateTags"
-       name="tags"
-       placeHolder="Type and press enter"
-     />
+     <GloomyTags :state="tags" :setState="updateTags" />
    </template>
    ```
 
