@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/gloomystore/vue-tag-maker.git"
+    "url": "git+https://github.com/gloomystore/vue-tag-maker.git"
   },
   "homepage": "https://www.gloomy-store.com",
   "main": "dist/index.js",
